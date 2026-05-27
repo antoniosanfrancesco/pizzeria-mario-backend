@@ -35,4 +35,4 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('🍃 Connesso con successo a MongoDB Atlas!'))
   .catch((err) => console.error('❌ Errore di connessione al database:', err));
 
-	module.exports = app;
+	export default app;
