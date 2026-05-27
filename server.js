@@ -11,7 +11,11 @@ const app = express();
 const PORT = process.env.PORT || 5000; 
 
 // 1. MIDDLEWARE (Devono essere sempre in cima)
-app.use(cors());
+app.use(cors({
+  origin: true,
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
+}));
 app.use(express.json());
 
 
