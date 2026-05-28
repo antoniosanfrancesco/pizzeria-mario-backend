@@ -6,11 +6,6 @@ const router = express.Router();
 //rotta di login
 router.post('/login', (req, res) => {
 	const {username, password } = req.body;
-	
-	console.log("=== ISPEZIONE LOGIN VERCEL ===");
-  console.log("Cosa hai digitato nel sito:", `"${username}"`, "e", `"${password}"`);
-  console.log("Cosa legge Vercel nel .env:", `"${process.env.ADMIN_USERNAME}"`, "e", `"${process.env.ADMIN_PASSWORD}"`);
-  console.log("==============================");
 
 	//check per vedere se le credenziali sono correte
 	if (username === process.env.ADMIN_USERNAME && password === process.env.ADMIN_PASSWORD) {
