@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000; 
 
-// 1. MIDDLEWARE (Devono essere sempre in cima)
+// 1. MIDDLEWARE 
 app.use(cors({
   origin: true,
   credentials: true,
@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 app.use('/api/piatti', piattiRoutes);
 app.use('/api/auth', authRoutes);
 
-// 2. ACCENDIAMO SUBITO IL SERVER (Così non rimane appeso!)
+// 2. ACCENDIAMO SUBITO IL SERVER 
 app.listen(PORT, () => {
   console.log(`🚀 Server in esecuzione alla grande su http://localhost:${PORT}`);
 });
